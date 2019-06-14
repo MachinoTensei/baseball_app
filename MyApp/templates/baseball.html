@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+{% block content %}
+
+
+	<h1>メジャーリーガー年俸予測</h1>
+	<h2>{{ message }}</h2>
+	<p></p>
+	
+	<form action = "/baseball/result" method = "post">
+	
+		<label for = "content">打率(0~1の値)</label><br>
+		<textarea name = "batting_avg" cols = "30" rows = "1"></textarea>
+		<p></p>
+		<label for = "content">出塁率(0~1の値)</label><br>
+		<textarea name = "obp" cols = "30" rows = "1"></textarea>
+		<p></p>
+		<label for = "content">得点(0以上の整数)</label><br>
+		<textarea name = "run" cols = "30" rows = "1"></textarea>
+		<p></p>
+		<label for = "content">ヒット数(0以上の整数)</label><br>
+		<textarea name = "hit" cols = "30" rows = "1"></textarea>
+		<p></p>
+		<label for = "content">ツーベースヒット数(0以上の整数)</label><br>
+		<textarea name = "double" cols = "30" rows = "1"></textarea>
+		<p></p>
+		<label for = "content">スリーベースヒット数(0以上の整数)</label><br>
+		<textarea name = "triple" cols = "30" rows = "1"></textarea>
+		<p></p>
+		<label for = "content">ホームラン数(0以上の整数)</label><br>
+		<textarea name = "homerun" cols = "30" rows = "1"></textarea>
+		<p></p>
+		<label for = "content">打点(0以上の整数)</label><br>
+		<textarea name = "rbi" cols = "30" rows = "1"></textarea>
+		<p></p>
+		<label for = "content">ファーボール(0以上の整数)</label><br>
+		<textarea name = "fourball" cols = "30" rows = "1"></textarea>
+		<p></p>
+		<label for = "content">三振(0以上の整数)</label><br>
+		<textarea name = "strikeout" cols = "30" rows = "1"></textarea>
+		<p></p>
+		<label for = "content">盗塁数(0以上の整数)</label><br>
+		<textarea name = "stolen" cols = "30" rows = "1"></textarea>
+		<p></p>
+		<label for = "content">エラー(0以上の整数)</label><br>
+		<textarea name = "error" cols = "30" rows = "1"></textarea>
+		<p></p>
+		
+		<button type = "submit">実行</button>
+		<p><a href = "/">トップページに戻る</a></p>
+	</form>
+
+
+
+{% endblock %}
